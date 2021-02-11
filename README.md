@@ -12,12 +12,6 @@
 </head>
 
 <body class="article toc2 toc-left">
-<p>&nbsp;</p>
-<!-- [if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-<p>&nbsp;</p>
-<!-- <title>Quarkus Serverless Datagrid - Deploying Quarkus Serverless apps integrated with
-    Datagrid</title> -->
-<p>&nbsp;</p>
 <div id="header">
 <h1>Deploying Quarkus Serverless apps with Datagrid on Red Hat OpenShift Platform</h1>
 <div id="toc" class="toc2">
@@ -195,11 +189,17 @@ DATAGRID_PROJECT_DISPLAY_NAME="DataGridCluster"</pre>
 <div class="ulist">
 <ul>
 <li>
-<p>Click on the quarkus-serverless-server application and the browser should open and should show an error on the screen (RESTEASY003210: Could not find resource for full path:...) this is expected. Copy the URL and using a rest client application execute a post wiht the below URL <strong>http:// &lt;&lt; replace with copied URL of quarkus-serverless-server app&gt;&gt;/employees/</strong> and use the below body in JSON format:</p>
+<p>Click on the quarkus-serverless-server application and the browser should open and should show an error on the screen (RESTEASY003210: Could not find resource for full path:...) this is expected. Copy the URL and using a <strong>rest client application</strong> execute a post wiht the below URL <strong>http:// &lt;&lt; replace with copied URL of quarkus-serverless-server app&gt;&gt;/employees/</strong> and use the below body in JSON format:</p>
 <div class="ulist">
 <ul>
 <li>
 <p>[ { "empId": "1A", "empName": "John Doe", "empProject": "Quarkus" }, { "empId": "2A", "empName": "Jane Doe", "empProject": "Quarkus" }, { "empId": "3A", "empName": "Jo Doe", "empProject": "Quarkus" } ]</p>
+</li>
+</ul>
+<strong>OR</strong>
+<ul>
+<li>
+<p><strong>curl</strong> -H "Content-Type: application/json" -X POST -d '[ { "empId": "1A", "empName": "John Doe", "empProject": "Quarkus" }, { "empId": "2A", "empName": "Jane Doe", "empProject": "Quarkus" }, { "empId": "3A", "empName": "Jo Doe", "empProject": "Quarkus" } ]' &lt;&gt;/employees</p>
 </li>
 </ul>
 </div>
